@@ -1,0 +1,449 @@
+name: Track Publications
+
+on:
+  schedule:
+    # Run weekly on Monday at 9 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+jobs:
+  track-publications:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install jq for JSON parsing
+        run: sudo apt-get update && sudo apt-get install -y jq
+      
+      - name: Query Crossref API for Assaf Breska
+        id: crossref-breska
+        continue-on-error: true
+        run: |
+          echo "Querying Crossref for Assaf Breska..."
+          SEVEN_DAYS_AGO=$(date -d '7 days ago' +%Y-%m-%d)
+          
+          RESPONSE=$(curl -s "https://api.crossref.org/works?query.author=Assaf+Breska&filter=from-pub-date:${SEVEN_DAYS_AGO}&rows=20&mailto=github-actions@example.com")
+          
+          if [ $? -eq 0 ] && [ -n "$RESPONSE" ]; then
+            echo "$RESPONSE" > crossref_breska.json
+            echo "✓ Crossref query successful for Assaf Breska"
+          else
+            echo "✗ Crossref query failed for Assaf Breska"
+            echo "{}" > crossref_breska.json
+          fi
+      
+      - name: Query Crossref API for Michael Tangermann
+        id: crossref-tangermann
+        continue-on-error: true
+        run: |
+          echo "Querying Crossref for Michael Tangermann..."
+          SEVEN_DAYS_AGO=$(date -d '7 days ago' +%Y-%m-%d)
+          
+          RESPONSE=$(curl -s "https://api.crossref.org/works?query.author=Michael+Tangermann&filter=from-pub-date:${SEVEN_DAYS_AGO}&rows=20&mailto=github-actions@example.com")
+          
+          if [ $? -eq 0 ] && [ -n "$RESPONSE" ]; then
+            echo "$RESPONSE" > crossref_tangermann.json
+            echo "✓ Crossref query successful for Michael Tangermann"
+          else
+            echo "✗ Crossref query failed for Michael Tangermann"
+            echo "{}" > crossref_tangermann.json
+          fi
+      
+      - name: Query Crossref API for Jordy Thielen
+        id: crossref-thielen
+        continue-on-error: true
+        run: |
+          echo "Querying Crossref for Jordy Thielen..."
+          SEVEN_DAYS_AGO=$(date -d '7 days ago' +%Y-%m-%d)
+          
+          RESPONSE=$(curl -s "https://api.crossref.org/works?query.author=Jordy+Thielen&filter=from-pub-date:${SEVEN_DAYS_AGO}&rows=20&mailto=github-actions@example.com")
+          
+          if [ $? -eq 0 ] && [ -n "$RESPONSE" ]; then
+            echo "$RESPONSE" > crossref_thielen.json
+            echo "✓ Crossref query successful for Jordy Thielen"
+          else
+            echo "✗ Crossref query failed for Jordy Thielen"
+            echo "{}" > crossref_thielen.json
+          fi
+      
+      - name: Query arXiv API for Assaf Breska
+        id: arxiv-breska
+        continue-on-error: true
+        run: |
+          echo "Querying arXiv for Assaf Breska..."
+          
+          RESPONSE=$(curl -s "http://export.arxiv.org/api/query?search_query=au:%22Assaf+Breska%22&sortBy=submittedDate&sortOrder=descending&max_results=20")
+          
+          if [ $? -eq 0 ] && [ -n "$RESPONSE" ]; then
+            echo "$RESPONSE" > arxiv_breska.xml
+            echo "✓ arXiv query successful for Assaf Breska"
+          else
+            echo "✗ arXiv query failed for Assaf Breska"
+            echo "<feed></feed>" > arxiv_breska.xml
+          fi
+      
+      - name: Query arXiv API for Michael Tangermann
+        id: arxiv-tangermann
+        continue-on-error: true
+        run: |
+          echo "Querying arXiv for Michael Tangermann..."
+          
+          RESPONSE=$(curl -s "http://export.arxiv.org/api/query?search_query=au:%22Michael+Tangermann%22&sortBy=submittedDate&sortOrder=descending&max_results=20")
+          
+          if [ $? -eq 0 ] && [ -n "$RESPONSE" ]; then
+            echo "$RESPONSE" > arxiv_tangermann.xml
+            echo "✓ arXiv query successful for Michael Tangermann"
+          else
+            echo "✗ arXiv query failed for Michael Tangermann"
+            echo "<feed></feed>" > arxiv_tangermann.xml
+          fi
+      
+      - name: Query arXiv API for Jordy Thielen
+        id: arxiv-thielen
+        continue-on-error: true
+        run: |
+          echo "Querying arXiv for Jordy Thielen..."
+          
+          RESPONSE=$(curl -s "http://export.arxiv.org/api/query?search_query=au:%22Jordy+Thielen%22&sortBy=submittedDate&sortOrder=descending&max_results=20")
+          
+          if [ $? -eq 0 ] && [ -n "$RESPONSE" ]; then
+            echo "$RESPONSE" > arxiv_thielen.xml
+            echo "✓ arXiv query successful for Jordy Thielen"
+          else
+            echo "✗ arXiv query failed for Jordy Thielen"
+            echo "<feed></feed>" > arxiv_thielen.xml
+          fi
+      
+      - name: Process publications and update files
+        id: process-pubs
+        run: |
+          echo "Processing publications..."
+          
+          # Create publications directory if it doesn't exist
+          mkdir -p publications
+          
+          # Initialize publications files if they don't exist
+          for author in "assaf-breska" "michael-tangermann" "jordy-thielen"; do
+            FILE="publications/${author}.md"
+            if [ ! -f "$FILE" ]; then
+              echo "# Publications for ${author}" > "$FILE"
+              echo "" >> "$FILE"
+              echo "| Title | Year | Journal | DOI | URL | Authors |" >> "$FILE"
+              echo "|-------|------|---------|-----|-----|---------|" >> "$FILE"
+            fi
+          done
+          
+          NEW_PUBS_FOUND=0
+          
+          # Function to check if DOI exists in file
+          check_duplicate_doi() {
+            local file=$1
+            local doi=$2
+            if [ -f "$file" ] && grep -q "$doi" "$file" 2>/dev/null; then
+              return 0  # Found (duplicate)
+            fi
+            return 1  # Not found
+          }
+          
+          # Function to check if title exists in file
+          check_duplicate_title() {
+            local file=$1
+            local title=$2
+            if [ -f "$file" ] && grep -qi "$title" "$file" 2>/dev/null; then
+              return 0  # Found (duplicate)
+            fi
+            return 1  # Not found
+          }
+          
+          # Function to escape markdown special characters
+          escape_markdown() {
+            echo "$1" | sed 's/|/\\|/g'
+          }
+          
+          # Function to get first N authors
+          get_authors() {
+            local authors="$1"
+            local max=5
+            echo "$authors" | head -n $max | tr '\n' '; ' | sed 's/; $//'
+          }
+          
+          # Process Crossref results for Assaf Breska
+          echo "Processing Crossref results for Assaf Breska..."
+          if [ -f crossref_breska.json ]; then
+            ITEMS=$(jq -r '.message.items // [] | length' crossref_breska.json 2>/dev/null || echo "0")
+            echo "Found $ITEMS Crossref items for Assaf Breska"
+            
+            for i in $(seq 0 $((ITEMS-1))); do
+              TITLE=$(jq -r ".message.items[$i].title[0] // \"\"" crossref_breska.json 2>/dev/null)
+              DOI=$(jq -r ".message.items[$i].DOI // \"\"" crossref_breska.json 2>/dev/null)
+              YEAR=$(jq -r ".message.items[$i].published.\"date-parts\"[0][0] // \"N/A\"" crossref_breska.json 2>/dev/null)
+              JOURNAL=$(jq -r ".message.items[$i].\"container-title\"[0] // \"N/A\"" crossref_breska.json 2>/dev/null)
+              AUTHORS=$(jq -r ".message.items[$i].author // [] | map(.given + \" \" + .family) | join(\"; \")" crossref_breska.json 2>/dev/null)
+              
+              if [ -n "$TITLE" ] && [ "$TITLE" != "null" ]; then
+                FILE="publications/assaf-breska.md"
+                
+                # Check for duplicates
+                if check_duplicate_doi "$FILE" "$DOI" || check_duplicate_title "$FILE" "$TITLE"; then
+                  echo "  ↳ Skipping duplicate: $TITLE"
+                  continue
+                fi
+                
+                # Escape markdown characters
+                TITLE_ESC=$(escape_markdown "$TITLE")
+                JOURNAL_ESC=$(escape_markdown "$JOURNAL")
+                AUTHORS_ESC=$(escape_markdown "$AUTHORS")
+                
+                URL="https://doi.org/$DOI"
+                echo "| $TITLE_ESC | $YEAR | $JOURNAL_ESC | $DOI | $URL | $AUTHORS_ESC |" >> "$FILE"
+                echo "  ✓ Added: $TITLE"
+                NEW_PUBS_FOUND=$((NEW_PUBS_FOUND + 1))
+              fi
+            done
+          fi
+          
+          # Process Crossref results for Michael Tangermann
+          echo "Processing Crossref results for Michael Tangermann..."
+          if [ -f crossref_tangermann.json ]; then
+            ITEMS=$(jq -r '.message.items // [] | length' crossref_tangermann.json 2>/dev/null || echo "0")
+            echo "Found $ITEMS Crossref items for Michael Tangermann"
+            
+            for i in $(seq 0 $((ITEMS-1))); do
+              TITLE=$(jq -r ".message.items[$i].title[0] // \"\"" crossref_tangermann.json 2>/dev/null)
+              DOI=$(jq -r ".message.items[$i].DOI // \"\"" crossref_tangermann.json 2>/dev/null)
+              YEAR=$(jq -r ".message.items[$i].published.\"date-parts\"[0][0] // \"N/A\"" crossref_tangermann.json 2>/dev/null)
+              JOURNAL=$(jq -r ".message.items[$i].\"container-title\"[0] // \"N/A\"" crossref_tangermann.json 2>/dev/null)
+              AUTHORS=$(jq -r ".message.items[$i].author // [] | map(.given + \" \" + .family) | join(\"; \")" crossref_tangermann.json 2>/dev/null)
+              
+              if [ -n "$TITLE" ] && [ "$TITLE" != "null" ]; then
+                FILE="publications/michael-tangermann.md"
+                
+                if check_duplicate_doi "$FILE" "$DOI" || check_duplicate_title "$FILE" "$TITLE"; then
+                  echo "  ↳ Skipping duplicate: $TITLE"
+                  continue
+                fi
+                
+                TITLE_ESC=$(escape_markdown "$TITLE")
+                JOURNAL_ESC=$(escape_markdown "$JOURNAL")
+                AUTHORS_ESC=$(escape_markdown "$AUTHORS")
+                
+                URL="https://doi.org/$DOI"
+                echo "| $TITLE_ESC | $YEAR | $JOURNAL_ESC | $DOI | $URL | $AUTHORS_ESC |" >> "$FILE"
+                echo "  ✓ Added: $TITLE"
+                NEW_PUBS_FOUND=$((NEW_PUBS_FOUND + 1))
+              fi
+            done
+          fi
+          
+          # Process Crossref results for Jordy Thielen
+          echo "Processing Crossref results for Jordy Thielen..."
+          if [ -f crossref_thielen.json ]; then
+            ITEMS=$(jq -r '.message.items // [] | length' crossref_thielen.json 2>/dev/null || echo "0")
+            echo "Found $ITEMS Crossref items for Jordy Thielen"
+            
+            for i in $(seq 0 $((ITEMS-1))); do
+              TITLE=$(jq -r ".message.items[$i].title[0] // \"\"" crossref_thielen.json 2>/dev/null)
+              DOI=$(jq -r ".message.items[$i].DOI // \"\"" crossref_thielen.json 2>/dev/null)
+              YEAR=$(jq -r ".message.items[$i].published.\"date-parts\"[0][0] // \"N/A\"" crossref_thielen.json 2>/dev/null)
+              JOURNAL=$(jq -r ".message.items[$i].\"container-title\"[0] // \"N/A\"" crossref_thielen.json 2>/dev/null)
+              AUTHORS=$(jq -r ".message.items[$i].author // [] | map(.given + \" \" + .family) | join(\"; \")" crossref_thielen.json 2>/dev/null)
+              
+              if [ -n "$TITLE" ] && [ "$TITLE" != "null" ]; then
+                FILE="publications/jordy-thielen.md"
+                
+                if check_duplicate_doi "$FILE" "$DOI" || check_duplicate_title "$FILE" "$TITLE"; then
+                  echo "  ↳ Skipping duplicate: $TITLE"
+                  continue
+                fi
+                
+                TITLE_ESC=$(escape_markdown "$TITLE")
+                JOURNAL_ESC=$(escape_markdown "$JOURNAL")
+                AUTHORS_ESC=$(escape_markdown "$AUTHORS")
+                
+                URL="https://doi.org/$DOI"
+                echo "| $TITLE_ESC | $YEAR | $JOURNAL_ESC | $DOI | $URL | $AUTHORS_ESC |" >> "$FILE"
+                echo "  ✓ Added: $TITLE"
+                NEW_PUBS_FOUND=$((NEW_PUBS_FOUND + 1))
+              fi
+            done
+          fi
+          
+          # Process arXiv results for Assaf Breska
+          echo "Processing arXiv results for Assaf Breska..."
+          if [ -f arxiv_breska.xml ]; then
+            # Extract entries from arXiv XML (simplified parsing)
+            SEVEN_DAYS_AGO_EPOCH=$(date -d '7 days ago' +%s)
+            
+            # Use xmllint if available for better XML parsing
+            if command -v xmllint &> /dev/null; then
+              ENTRIES=$(xmllint --xpath "count(//*[local-name()='entry'])" arxiv_breska.xml 2>/dev/null || echo "0")
+              echo "Found $ENTRIES arXiv entries for Assaf Breska"
+              
+              for i in $(seq 1 $ENTRIES); do
+                TITLE=$(xmllint --xpath "string(//*[local-name()='entry'][$i]/*[local-name()='title'])" arxiv_breska.xml 2>/dev/null | tr '\n' ' ' | sed 's/  */ /g')
+                ARXIV_ID=$(xmllint --xpath "string(//*[local-name()='entry'][$i]/*[local-name()='id'])" arxiv_breska.xml 2>/dev/null | sed 's|.*/||')
+                PUBLISHED=$(xmllint --xpath "string(//*[local-name()='entry'][$i]/*[local-name()='published'])" arxiv_breska.xml 2>/dev/null)
+                AUTHORS=$(xmllint --xpath "//*[local-name()='entry'][$i]/*[local-name()='author']/*[local-name()='name']/text()" arxiv_breska.xml 2>/dev/null | tr '\n' '; ' | sed 's/; $//')
+                
+                # Check if published within last 7 days
+                PUB_EPOCH=$(date -d "$PUBLISHED" +%s 2>/dev/null || echo "0")
+                if [ $PUB_EPOCH -lt $SEVEN_DAYS_AGO_EPOCH ]; then
+                  continue
+                fi
+                
+                YEAR=$(echo "$PUBLISHED" | cut -d'-' -f1)
+                
+                if [ -n "$TITLE" ] && [ "$TITLE" != " " ]; then
+                  FILE="publications/assaf-breska.md"
+                  
+                  if check_duplicate_title "$FILE" "$TITLE"; then
+                    echo "  ↳ Skipping duplicate: $TITLE"
+                    continue
+                  fi
+                  
+                  TITLE_ESC=$(escape_markdown "$TITLE")
+                  AUTHORS_ESC=$(escape_markdown "$AUTHORS")
+                  
+                  URL="https://arxiv.org/abs/$ARXIV_ID"
+                  echo "| $TITLE_ESC | $YEAR | arXiv | arXiv:$ARXIV_ID | $URL | $AUTHORS_ESC |" >> "$FILE"
+                  echo "  ✓ Added: $TITLE"
+                  NEW_PUBS_FOUND=$((NEW_PUBS_FOUND + 1))
+                fi
+              done
+            fi
+          fi
+          
+          # Process arXiv results for Michael Tangermann
+          echo "Processing arXiv results for Michael Tangermann..."
+          if [ -f arxiv_tangermann.xml ]; then
+            SEVEN_DAYS_AGO_EPOCH=$(date -d '7 days ago' +%s)
+            
+            if command -v xmllint &> /dev/null; then
+              ENTRIES=$(xmllint --xpath "count(//*[local-name()='entry'])" arxiv_tangermann.xml 2>/dev/null || echo "0")
+              echo "Found $ENTRIES arXiv entries for Michael Tangermann"
+              
+              for i in $(seq 1 $ENTRIES); do
+                TITLE=$(xmllint --xpath "string(//*[local-name()='entry'][$i]/*[local-name()='title'])" arxiv_tangermann.xml 2>/dev/null | tr '\n' ' ' | sed 's/  */ /g')
+                ARXIV_ID=$(xmllint --xpath "string(//*[local-name()='entry'][$i]/*[local-name()='id'])" arxiv_tangermann.xml 2>/dev/null | sed 's|.*/||')
+                PUBLISHED=$(xmllint --xpath "string(//*[local-name()='entry'][$i]/*[local-name()='published'])" arxiv_tangermann.xml 2>/dev/null)
+                AUTHORS=$(xmllint --xpath "//*[local-name()='entry'][$i]/*[local-name()='author']/*[local-name()='name']/text()" arxiv_tangermann.xml 2>/dev/null | tr '\n' '; ' | sed 's/; $//')
+                
+                PUB_EPOCH=$(date -d "$PUBLISHED" +%s 2>/dev/null || echo "0")
+                if [ $PUB_EPOCH -lt $SEVEN_DAYS_AGO_EPOCH ]; then
+                  continue
+                fi
+                
+                YEAR=$(echo "$PUBLISHED" | cut -d'-' -f1)
+                
+                if [ -n "$TITLE" ] && [ "$TITLE" != " " ]; then
+                  FILE="publications/michael-tangermann.md"
+                  
+                  if check_duplicate_title "$FILE" "$TITLE"; then
+                    echo "  ↳ Skipping duplicate: $TITLE"
+                    continue
+                  fi
+                  
+                  TITLE_ESC=$(escape_markdown "$TITLE")
+                  AUTHORS_ESC=$(escape_markdown "$AUTHORS")
+                  
+                  URL="https://arxiv.org/abs/$ARXIV_ID"
+                  echo "| $TITLE_ESC | $YEAR | arXiv | arXiv:$ARXIV_ID | $URL | $AUTHORS_ESC |" >> "$FILE"
+                  echo "  ✓ Added: $TITLE"
+                  NEW_PUBS_FOUND=$((NEW_PUBS_FOUND + 1))
+                fi
+              done
+            fi
+          fi
+          
+          # Process arXiv results for Jordy Thielen
+          echo "Processing arXiv results for Jordy Thielen..."
+          if [ -f arxiv_thielen.xml ]; then
+            SEVEN_DAYS_AGO_EPOCH=$(date -d '7 days ago' +%s)
+            
+            if command -v xmllint &> /dev/null; then
+              ENTRIES=$(xmllint --xpath "count(//*[local-name()='entry'])" arxiv_thielen.xml 2>/dev/null || echo "0")
+              echo "Found $ENTRIES arXiv entries for Jordy Thielen"
+              
+              for i in $(seq 1 $ENTRIES); do
+                TITLE=$(xmllint --xpath "string(//*[local-name()='entry'][$i]/*[local-name()='title'])" arxiv_thielen.xml 2>/dev/null | tr '\n' ' ' | sed 's/  */ /g')
+                ARXIV_ID=$(xmllint --xpath "string(//*[local-name()='entry'][$i]/*[local-name()='id'])" arxiv_thielen.xml 2>/dev/null | sed 's|.*/||')
+                PUBLISHED=$(xmllint --xpath "string(//*[local-name()='entry'][$i]/*[local-name()='published'])" arxiv_thielen.xml 2>/dev/null)
+                AUTHORS=$(xmllint --xpath "//*[local-name()='entry'][$i]/*[local-name()='author']/*[local-name()='name']/text()" arxiv_thielen.xml 2>/dev/null | tr '\n' '; ' | sed 's/; $//')
+                
+                PUB_EPOCH=$(date -d "$PUBLISHED" +%s 2>/dev/null || echo "0")
+                if [ $PUB_EPOCH -lt $SEVEN_DAYS_AGO_EPOCH ]; then
+                  continue
+                fi
+                
+                YEAR=$(echo "$PUBLISHED" | cut -d'-' -f1)
+                
+                if [ -n "$TITLE" ] && [ "$TITLE" != " " ]; then
+                  FILE="publications/jordy-thielen.md"
+                  
+                  if check_duplicate_title "$FILE" "$TITLE"; then
+                    echo "  ↳ Skipping duplicate: $TITLE"
+                    continue
+                  fi
+                  
+                  TITLE_ESC=$(escape_markdown "$TITLE")
+                  AUTHORS_ESC=$(escape_markdown "$AUTHORS")
+                  
+                  URL="https://arxiv.org/abs/$ARXIV_ID"
+                  echo "| $TITLE_ESC | $YEAR | arXiv | arXiv:$ARXIV_ID | $URL | $AUTHORS_ESC |" >> "$FILE"
+                  echo "  ✓ Added: $TITLE"
+                  NEW_PUBS_FOUND=$((NEW_PUBS_FOUND + 1))
+                fi
+              done
+            fi
+          fi
+          
+          echo "NEW_PUBS_FOUND=$NEW_PUBS_FOUND" >> $GITHUB_OUTPUT
+          echo "========================================="
+          echo "Summary: Found $NEW_PUBS_FOUND new publications"
+          echo "========================================="
+      
+      - name: Commit and push changes
+        if: steps.process-pubs.outputs.NEW_PUBS_FOUND != '0'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add publications/*.md
+          
+          NEW_COUNT="${{ steps.process-pubs.outputs.NEW_PUBS_FOUND }}"
+          
+          if [ "$NEW_COUNT" -eq 1 ]; then
+            COMMIT_MSG="📚 Add $NEW_COUNT new publication"
+          else
+            COMMIT_MSG="📚 Add $NEW_COUNT new publications"
+          fi
+          
+          COMMIT_MSG="$COMMIT_MSG
+
+          Automated publication tracking update
+          - Queried Crossref and arXiv APIs
+          - Checked for duplicates
+          - Updated publications.md files
+          
+          Run date: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          
+          git commit -m "$COMMIT_MSG"
+          git push
+          
+          echo "✓ Successfully committed and pushed $NEW_COUNT new publication(s)"
+      
+      - name: No new publications found
+        if: steps.process-pubs.outputs.NEW_PUBS_FOUND == '0'
+        run: |
+          echo "ℹ️  No new publications found in the past 7 days"
+          echo "All tracked authors are up to date!"
