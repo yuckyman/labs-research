@@ -1,6 +1,7 @@
 ---
 tags: [faculty, radboud-university]
 type: faculty-list
+draft: false
 ---
 
 # Faculty - Radboud University, Donders Institute
@@ -44,7 +45,7 @@ type: faculty-list
 - Cognitive control
 - Dopamine and cognition
 
-**Lab:** [Lab name and website]
+**Lab:** Motivational & Cognitive Control Lab
 
 **Key Publications:**
 - [Publication 1]
@@ -66,7 +67,7 @@ type: faculty-list
 - Developmental cognitive neuroscience
 - [Research area 3]
 
-**Lab:** Donders Centre for Cognition
+**Lab:** Baby Research on Action, Interaction & Neurocognition (BRAIN)
 
 **Key Publications:**
 - [Publication 1]
@@ -88,7 +89,7 @@ type: faculty-list
 - Computational neuroscience
 - Machine learning for neuroscience
 
-**Lab:** Donders Centre for Cognition
+**Lab:** Artificial Cognitive Systems
 
 **Key Publications:**
 - [Publication 1]
@@ -122,7 +123,7 @@ type: faculty-list
 
 ### Marius Peelen
 
-**Position:** Research Group Leader  
+**Position:** Professor of Visual and Cognitive Neuroscience  
 **Email:** [To be updated]  
 **Website:** [Personal/Lab website]  
 **CV:** [Link to CV]  
@@ -134,27 +135,6 @@ type: faculty-list
 - Scene understanding
 
 **Lab:** Visual Cognitive Neuroscience Group
-
-**Key Publications:**
-- [Publication 1]
-
----
-
-### David Heeger
-
-**Position:** Research Group Leader  
-**Email:** [To be updated]  
-**Website:** [Personal/Lab website]  
-**CV:** [Link to CV]  
-**ORCID:** [ORCID ID]
-
-**Research Interests:**
-- Visual perception
-- Attention
-- Working memory
-- Computational models of cortical circuits
-
-**Lab:** Perception and Brain Dynamics Laboratory
 
 **Key Publications:**
 - [Publication 1]
@@ -288,7 +268,6 @@ type: faculty-list
 ### Perception, Action and Control
 - Floris de Lange (Predictive Brain Lab)
 - Marius Peelen (Visual Cognitive Neuroscience Group)
-- David Heeger (Perception and Brain Dynamics Laboratory)
 - Ivan Toni (Intention & Action Lab)
 
 ### Plasticity and Memory
