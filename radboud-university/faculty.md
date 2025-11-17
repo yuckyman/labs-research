@@ -7,21 +7,21 @@ type: faculty-list
 
 ## Principal Investigators
 
-### [Faculty Name]
+### Floris de Lange
 
-**Position:** Professor / Principal Investigator  
-**Email:** [email@donders.ru.nl]  
+**Position:** Professor of Perception & Cognition  
+**Email:** [To be updated]  
 **Website:** [Personal/Lab website]  
 **CV:** [Link to CV]  
 **ORCID:** [ORCID ID]  
 **Google Scholar:** [Profile link]
 
 **Research Interests:**
-- [Research area 1]
-- [Research area 2]
-- [Research area 3]
+- Predictive processing
+- Perception and decision-making
+- Neural mechanisms of prediction
 
-**Lab:** [Lab name and website]
+**Lab:** Predictive Brain Lab
 
 **Key Publications:**
 - [Publication 1]
@@ -30,19 +30,19 @@ type: faculty-list
 
 ---
 
-### [Faculty Name]
+### Roshan Cools
 
-**Position:** Associate Professor / PI  
-**Email:** [email@donders.ru.nl]  
-**Website:** [Personal/Lab website]  
+**Position:** Principal Investigator, Donders Centre for Cognitive Neuroimaging  
+**Email:** [To be updated]  
+**Website:** https://www.ru.nl/en/people/cools-r  
 **CV:** [Link to CV]  
 **ORCID:** [ORCID ID]  
 **Google Scholar:** [Profile link]
 
 **Research Interests:**
-- [Research area 1]
-- [Research area 2]
-- [Research area 3]
+- Cognitive neuropsychiatry
+- Cognitive control
+- Dopamine and cognition
 
 **Lab:** [Lab name and website]
 
@@ -52,19 +52,209 @@ type: faculty-list
 
 ---
 
-## Assistant Professors and Junior PIs
+### Sabine Hunnius
 
-### [Faculty Name]
+**Position:** Professor of Cognitive Psychology  
+**Email:** [To be updated]  
+**Website:** [Personal/Lab website]  
+**CV:** [Link to CV]  
+**ORCID:** [ORCID ID]  
+**Google Scholar:** [Profile link]
 
-**Position:** Assistant Professor / Junior PI  
-**Email:** [email@donders.ru.nl]  
+**Research Interests:**
+- Cognitive psychology
+- Developmental cognitive neuroscience
+- [Research area 3]
+
+**Lab:** Donders Centre for Cognition
+
+**Key Publications:**
+- [Publication 1]
+- [Publication 2]
+
+---
+
+### Marcel van Gerven
+
+**Position:** Professor of Artificial Intelligence  
+**Email:** [To be updated]  
+**Website:** [Personal/Lab website]  
+**CV:** [Link to CV]  
+**ORCID:** [ORCID ID]  
+**Google Scholar:** [Profile link]
+
+**Research Interests:**
+- Artificial intelligence
+- Computational neuroscience
+- Machine learning for neuroscience
+
+**Lab:** Donders Centre for Cognition
+
+**Key Publications:**
+- [Publication 1]
+- [Publication 2]
+
+---
+
+### Ivan Toni
+
+**Position:** Professor of Cognitive Psychology  
+**Email:** [To be updated]  
+**Website:** [Personal/Lab website]  
+**CV:** [Link to CV]  
+**ORCID:** [ORCID ID]  
+**Google Scholar:** [Profile link]
+
+**Research Interests:**
+- Intention and action
+- Motor control
+- Social cognition
+
+**Lab:** Intention & Action Lab
+
+**Key Publications:**
+- [Publication 1]
+- [Publication 2]
+
+---
+
+## Research Group Leaders
+
+### Marius Peelen
+
+**Position:** Research Group Leader  
+**Email:** [To be updated]  
 **Website:** [Personal/Lab website]  
 **CV:** [Link to CV]  
 **ORCID:** [ORCID ID]
 
 **Research Interests:**
-- [Research area 1]
-- [Research area 2]
+- Visual perception
+- Visual cognition
+- Scene understanding
+
+**Lab:** Visual Cognitive Neuroscience Group
+
+**Key Publications:**
+- [Publication 1]
+
+---
+
+### David Heeger
+
+**Position:** Research Group Leader  
+**Email:** [To be updated]  
+**Website:** [Personal/Lab website]  
+**CV:** [Link to CV]  
+**ORCID:** [ORCID ID]
+
+**Research Interests:**
+- Visual perception
+- Attention
+- Working memory
+- Computational models of cortical circuits
+
+**Lab:** Perception and Brain Dynamics Laboratory
+
+**Key Publications:**
+- [Publication 1]
+
+---
+
+### Umut Güçlü
+
+**Position:** PI, Computational Models of Cognition & Brain Dynamics  
+**Email:** [To be updated]  
+**Website:** [Personal/Lab website]  
+**CV:** [Link to CV]  
+**ORCID:** [ORCID ID]
+
+**Research Interests:**
+- Computational models of cognition
+- Brain dynamics
+- [Research area 3]
+
+**Lab:** [Lab name and website]
+
+**Key Publications:**
+- [Publication 1]
+
+---
+
+### Jan Buitelaar
+
+**Position:** PI, Medical Neuroscience & Child Psychiatry  
+**Email:** [To be updated]  
+**Website:** [Personal/Lab website]  
+**CV:** [Link to CV]  
+**ORCID:** [ORCID ID]
+
+**Research Interests:**
+- Medical neuroscience
+- Child psychiatry
+- Neurodevelopmental disorders
+
+**Lab:** [Lab name and website]
+
+**Key Publications:**
+- [Publication 1]
+
+---
+
+### Esther Aarts
+
+**Position:** PI, Food & Cognition  
+**Email:** [To be updated]  
+**Website:** [Personal/Lab website]  
+**CV:** [Link to CV]  
+**ORCID:** [ORCID ID]
+
+**Research Interests:**
+- Food and cognition
+- Neuroimaging of eating behaviour
+- [Research area 3]
+
+**Lab:** [Lab name and website]
+
+**Key Publications:**
+- [Publication 1]
+
+---
+
+## Assistant Professors and Junior PIs
+
+### Vitória Piai
+
+**Position:** Associate PI, Neuropsychology & Rehabilitation Psychology  
+**Email:** [To be updated]  
+**Website:** [Personal/Lab website]  
+**CV:** [Link to CV]  
+**ORCID:** [ORCID ID]
+
+**Research Interests:**
+- Neuropsychology
+- Rehabilitation psychology
+- [Research area 3]
+
+**Lab:** [Lab name and website]
+
+**Key Publications:**
+- [Publication 1]
+
+---
+
+### Max Hinne
+
+**Position:** Associate Professor of AI  
+**Email:** [To be updated]  
+**Website:** [Personal/Lab website]  
+**CV:** [Link to CV]  
+**ORCID:** [ORCID ID]
+
+**Research Interests:**
+- Probabilistic models
+- Network neuroscience
+- Artificial intelligence
 
 **Lab:** [Lab name and website]
 
@@ -93,16 +283,20 @@ type: faculty-list
 ## Research Themes
 
 ### Language and Communication
-- [Faculty members in this theme]
+- Vitória Piai
 
 ### Perception, Action and Control
-- [Faculty members in this theme]
+- Floris de Lange (Predictive Brain Lab)
+- Marius Peelen (Visual Cognitive Neuroscience Group)
+- David Heeger (Perception and Brain Dynamics Laboratory)
+- Ivan Toni (Intention & Action Lab)
 
 ### Plasticity and Memory
 - [Faculty members in this theme]
 
 ### Brain Networks and Neuronal Communication
-- [Faculty members in this theme]
+- Umut Güçlü
+- Max Hinne
 
 ## Notes
 
@@ -117,4 +311,4 @@ type: faculty-list
 
 ---
 
-*Template - Update with actual faculty information*
+*Last updated: November 2025*

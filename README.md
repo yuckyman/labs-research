@@ -26,8 +26,16 @@ The `tracking/` directory contains:
 
 ## Current Labs
 
-- **Max Planck Institute for Biological Cybernetics, Tübingen**
-- **Radboud University, Donders Institute**
+- **Berlin BCCN** - Bernstein Center for Computational Neuroscience
+- **Berlin School** - Berlin School of Mind and Brain
+- **Copenhagen** - University of Copenhagen
+- **Karolinska** - Karolinska Institute (Stockholm)
+- **Max Planck Frankfurt** - Max Planck Institute for Brain Research
+- **Max Planck Tübingen** - Max Planck Institute for Biological Cybernetics
+- **MPII** - Max Planck Institute for Intelligent Systems
+- **Radboud University** - Donders Institute for Brain, Cognition and Behaviour
+- **Tübingen University** - University of Tübingen
+- **UCL** - University College London
 
 ## Usage with Obsidian
 

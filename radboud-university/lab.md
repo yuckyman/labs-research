@@ -46,6 +46,20 @@ The Netherlands
 3. **Plasticity and Memory**
 4. **Brain Networks and Neuronal Communication**
 
+## Research Groups
+
+### Predictive Brain Lab
+- **Lead Researcher:** Floris de Lange
+- **Focus:** Neural and cognitive mechanisms underlying predictive processing during perception and decision-making.
+
+### Visual Cognitive Neuroscience Group
+- **Lead Researcher:** Marius Peelen
+- **Focus:** Neural basis of interactions between visual perception and cognition, exploring how the brain extracts meaningful information from complex scenes and how visual cortex activity interfaces with cognitive functions such as memory and attention.
+
+### Perception and Brain Dynamics Laboratory
+- **Lead Researcher:** David Heeger
+- **Focus:** Neural mechanisms of visual perception, attention, and working memory, employing computational models to understand cortical circuits.
+
 ## Facilities
 
 - 3T MRI scanners (Siemens Prisma)
