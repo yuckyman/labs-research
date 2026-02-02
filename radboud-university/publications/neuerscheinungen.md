@@ -2,10 +2,10 @@
 title: "Neuerscheinungen"
 authors:
   - "Barbara Lange"
-year: 2025
+year: 2026
 journal: "Die Aktiengesellschaft"
-doi: "10.9785/ag-2026-711-230"
-url: "https://doi.org/10.9785/ag-2026-711-230"
+doi: "10.9785/ag-2026-710325"
+url: "https://doi.org/10.9785/ag-2026-710325"
 lab: "radboud-university"
 faculty:
   - "Floris de Lange"
@@ -14,15 +14,15 @@ tags:
   - "radboud-university"
 fulltext_available: false
 fulltext_source: "none"
-created: "2025-12-22T09:31:56.473173"
+created: "2026-02-02T09:54:25.230705"
 ---
 
 # Neuerscheinungen
 
 ## Links
 
-- DOI: [10.9785/ag-2026-711-230](https://doi.org/10.9785/ag-2026-711-230)
-- URL: [Link](https://doi.org/10.9785/ag-2026-711-230)
+- DOI: [10.9785/ag-2026-710325](https://doi.org/10.9785/ag-2026-710325)
+- URL: [Link](https://doi.org/10.9785/ag-2026-710325)
 
 ## Faculty
 
