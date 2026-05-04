@@ -1,29 +1,29 @@
 ---
 title: "Conclusion"
 authors:
-  - "Prabir Bhattacharya"
-year: 2025
-journal: "The Indian Origins of Modern Economic Growth"
-doi: "10.4324/9781003715368-5"
-url: "https://doi.org/10.4324/9781003715368-5"
+  - "Monica G. Fernandes"
+year: 2026
+journal: "Women Fighting Apartheid"
+doi: "10.4324/9781003622796-8"
+url: "https://doi.org/10.4324/9781003622796-8"
 lab: "neuro-interaction-innovation-lab"
 faculty:
-  - "Sylvia Bhattacharya"
+  - "Sarah Fernandes"
 tags:
   - "publication"
   - "neuro-interaction-innovation-lab"
 fulltext_available: false
 fulltext_source: "none"
-created: "2025-11-24T09:33:36.863417"
+created: "2026-05-04T11:07:28.863108"
 ---
 
 # Conclusion
 
 ## Links
 
-- DOI: [10.4324/9781003715368-5](https://doi.org/10.4324/9781003715368-5)
-- URL: [Link](https://doi.org/10.4324/9781003715368-5)
+- DOI: [10.4324/9781003622796-8](https://doi.org/10.4324/9781003622796-8)
+- URL: [Link](https://doi.org/10.4324/9781003622796-8)
 
 ## Faculty
 
-- [[neuro-interaction-innovation-lab/faculty#sylvia-bhattacharya|Sylvia Bhattacharya]]
+- [[neuro-interaction-innovation-lab/faculty#sarah-fernandes|Sarah Fernandes]]

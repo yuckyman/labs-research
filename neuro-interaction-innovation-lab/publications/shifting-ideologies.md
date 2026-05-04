@@ -1,11 +1,11 @@
 ---
-title: "Introduction"
+title: "Shifting Ideologies"
 authors:
   - "Monica G. Fernandes"
 year: 2026
 journal: "Women Fighting Apartheid"
-doi: "10.4324/9781003622796-1"
-url: "https://doi.org/10.4324/9781003622796-1"
+doi: "10.4324/9781003622796-4"
+url: "https://doi.org/10.4324/9781003622796-4"
 lab: "neuro-interaction-innovation-lab"
 faculty:
   - "Sarah Fernandes"
@@ -14,15 +14,15 @@ tags:
   - "neuro-interaction-innovation-lab"
 fulltext_available: false
 fulltext_source: "none"
-created: "2026-05-04T11:07:32.672908"
+created: "2026-05-04T11:07:30.125741"
 ---
 
-# Introduction
+# Shifting Ideologies
 
 ## Links
 
-- DOI: [10.4324/9781003622796-1](https://doi.org/10.4324/9781003622796-1)
-- URL: [Link](https://doi.org/10.4324/9781003622796-1)
+- DOI: [10.4324/9781003622796-4](https://doi.org/10.4324/9781003622796-4)
+- URL: [Link](https://doi.org/10.4324/9781003622796-4)
 
 ## Faculty
 
