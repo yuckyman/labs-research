@@ -1,0 +1,137 @@
+---
+title: |
+  Regional, functional and transcriptomic decoding of multidimensional brain structure alterations in obsessive-compulsive disorder.
+authors:
+  - "Leonardo Cardoso Saraiva"
+  - "João R Sato"
+  - "Isaac Sebenius"
+  - "Nadza Dzinalija"
+  - "Carla Del Río-Torné"
+  - "Fábio Godinho"
+  - "Antonio C Lopes"
+  - "Thomas V Fernandez"
+  - "Monicke O Lima"
+  - "Vanessa R Ramos"
+  - "Ricardo Iglesio"
+  - "Yoshinari Abe"
+  - "Pino Alonso"
+  - "Stephanie H Ameis"
+  - "Alan Anticevic"
+  - "Ana Araújo"
+  - "Paul D Arnold"
+  - "Srinivas Balachander"
+  - "Nerisa Banaj"
+  - "Marcelo C Batistuzzo"
+  - "Francesco Benedetti"
+  - "Irene Bollettini"
+  - "Beatrice Bravi"
+  - "Brian Brennan"
+  - "Jan Buitelaar"
+  - "Miguel Castelo-Branco"
+  - "Sunah Choi"
+  - "Ana D Costa"
+  - "Sara Dallaspezia"
+  - "Damiaan Denys"
+  - "Isabel C Duarte"
+  - "Marco A N Echevarria"
+  - "Goi Khia Eng"
+  - "Afonso Fernandes"
+  - "Jamie D Feusner"
+  - "Martijn Figee"
+  - "Sophie M D D Fitzsimmons"
+  - "Leonardo F Fontenelle"
+  - "Rachael Grazioplene"
+  - "Minji Ha"
+  - "Alejandro Hinojosa"
+  - "Marcelo Q Hoexter"
+  - "Chaim Huijser"
+  - "Hao Hu"
+  - "Anthony James"
+  - "Minah Kim"
+  - "Jun Soo Kwon"
+  - "Luisa Lazaro"
+  - "Christine Lochner"
+  - "Mafalda Machado-Sousa"
+  - "Hein van Marle"
+  - "Ignacio Martínez-Zalacaín"
+  - "David Mataix-Cols"
+  - "José M Menchón"
+  - "Luciano Minuzzi"
+  - "Pedro Morgado"
+  - "Emma Muñoz-Moreno"
+  - "Tomohiro Nakao"
+  - "Janardhanan C Narayanaswamy"
+  - "Erika L Nurmi"
+  - "Joseph O'Neill"
+  - "Inkyung Park"
+  - "Mary L Phillips"
+  - "John C Piacentini"
+  - "Maria Picó-Pérez"
+  - "Fabrizio Piras"
+  - "Federica Piras"
+  - "Tjardo S Postma"
+  - "Chiang-Shan R Li"
+  - "Janardhan Y C Reddy"
+  - "Daan van Rooij"
+  - "Yuki Sakai"
+  - "Juliana B de Salles Andrade"
+  - "Freda Scheffler"
+  - "Venkataram Shivakumar"
+  - "Noam Soreni"
+  - "Emily R Stern"
+  - "Anouk van der Straten"
+  - "Sophia I Thomopoulos"
+  - "Hirofumi Tomiyama"
+  - "Fernanda Tovar-Moll"
+  - "Daniela Vecchio"
+  - "Dick J Veltman"
+  - "Ganesan Venkatasubramanian"
+  - "Chris Vriend"
+  - "Zhen Wang"
+  - "Ysbrand D van der Werf"
+  - "Guido van Wingen"
+  - "Qing Zhao"
+  - "Alexander W Charney"
+  - "Youngsun T Cho"
+  - "Roseli G Shavitt"
+  - "Helen Pushkarskaya"
+  - "Carles Soriano-Mas"
+  - "Rafael Romero-Garcia"
+  - "Paul M Thompson"
+  - "Dan J Stein"
+  - "Odile A van den Heuvel"
+  - "Anderson M Winkler"
+  - "Euripedes C Miguel Filho"
+  - "Christopher Pittenger"
+  - "Carolina Cappi"
+year: 2026
+journal: "Nature communications"
+doi: "10.1038/s41467-026-74153-2"
+url: "https://pubmed.ncbi.nlm.nih.gov/42343090"
+lab: "radboud-university"
+faculty:
+  - "Jan Buitelaar"
+tags:
+  - "publication"
+  - "radboud-university"
+abstract: |
+  Studies of brain morphology in mental illness often focus on a few neuroimaging phenotypes. Here we present a comprehensive morphological characterization in obsessive-compulsive disorder (OCD) in a large sample (2255 OCD, 2264 controls) using nine cortical and four subcortical phenotypes, including several not previously examined in OCD, among them a subcortical structural similarity network phenotype developed here. Spatially distinct regional alterations emerged across structural phenotypes: cortical curvature alterations in default mode and frontoparietal networks, increased structural similarity network node degree in sensorimotor regions, widespread volume reductions associated with medication use, and localized subcortical shape alterations. In brain-behavior predictive models, curvature phenotypes showed the strongest associations with clinical features. Cortical alterations, especially in structural similarity networks, were associated with specific gene expression patterns, implicating dysregulation of excitatory neurons. RNA-sequencing data from tissue collected during functional neurosurgery revealed that genes downregulated in the dorsolateral prefrontal cortex in OCD contributed to the gene expression patterns linked to cortical alterations. Previously reported differentially expressed genes from postmortem brain studies of OCD also contributed. These findings support the importance of a comprehensive approach to characterizing brain morphology and suggest that cortical curvature and structural similarity alterations reflect key pathophysiological processes in OCD.
+fulltext_available: false
+fulltext_source: "none"
+created: "2026-06-29T13:11:34.076821"
+---
+
+# Regional, functional and transcriptomic decoding of multidimensional brain structure alterations in obsessive-compulsive disorder.
+
+## Abstract
+
+Studies of brain morphology in mental illness often focus on a few neuroimaging phenotypes. Here we present a comprehensive morphological characterization in obsessive-compulsive disorder (OCD) in a large sample (2255 OCD, 2264 controls) using nine cortical and four subcortical phenotypes, including several not previously examined in OCD, among them a subcortical structural similarity network phenotype developed here. Spatially distinct regional alterations emerged across structural phenotypes: cortical curvature alterations in default mode and frontoparietal networks, increased structural similarity network node degree in sensorimotor regions, widespread volume reductions associated with medication use, and localized subcortical shape alterations. In brain-behavior predictive models, curvature phenotypes showed the strongest associations with clinical features. Cortical alterations, especially in structural similarity networks, were associated with specific gene expression patterns, implicating dysregulation of excitatory neurons. RNA-sequencing data from tissue collected during functional neurosurgery revealed that genes downregulated in the dorsolateral prefrontal cortex in OCD contributed to the gene expression patterns linked to cortical alterations. Previously reported differentially expressed genes from postmortem brain studies of OCD also contributed. These findings support the importance of a comprehensive approach to characterizing brain morphology and suggest that cortical curvature and structural similarity alterations reflect key pathophysiological processes in OCD.
+
+## Links
+
+- DOI: [10.1038/s41467-026-74153-2](https://doi.org/10.1038/s41467-026-74153-2)
+- URL: [Link](https://pubmed.ncbi.nlm.nih.gov/42343090)
+
+## Faculty
+
+- [[radboud-university/faculty#jan-buitelaar|Jan Buitelaar]]
