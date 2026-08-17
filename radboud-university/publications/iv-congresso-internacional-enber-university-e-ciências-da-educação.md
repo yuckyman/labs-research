@@ -1,0 +1,36 @@
+---
+title: "IV Congresso Internacional Enber University e Ciências da Educação"
+authors:
+  - "Daysi Lange"
+  - "José Félix Santos"
+year: 2026
+journal: "Ivy Enber Scientific Journal"
+doi: "10.57108/iesj.congresso2026.1"
+url: "https://doi.org/10.57108/iesj.congresso2026.1"
+lab: "radboud-university"
+faculty:
+  - "Floris de Lange"
+tags:
+  - "publication"
+  - "radboud-university"
+abstract: |
+  <jats:p>O IV Congresso Internacional da Enber University (2026) propôs como tema os “250 Anos da Independência: Saberes, Direitos e Responsabilidades para o Futuro”, um marco histórico que extrapola a simples celebração nacional, pois oferece a oportunidade de questionar se as novas gerações compreendem os princípios que tornaram a independência estadunidense possível e, assim como, se as escolas estão preparando os estudantes para preservar e fortalecer esses valores democráticos. Os 250 anos da independência dos EUA não devem ser vistos apenas como uma celebração patriótica, mas um convite à reflexão sobre a forma como a educação cívica vem sendo ensinada e como os valores democráticos estão sendo vivenciados na sociedade contemporânea. Durante o evento, os Grupos de Trabalho do Programa de Pós-graduação em Ciências da Educação: Educação, Democracia e Direitos Humanos: Diversidade, Inclusão e Formação para a Cidadania à luz do Contexto dos 250 Anos da Independência dos Estados Unidos e, Educação, Globalização e Transformações Sociais: Processos Educativos, Políticas Públicas e Tecnologias em Perspectiva Democrática -, reuniram pesquisas relacionadas à educação como espaço de construção da democracia e da cidadania, à luz dos princípios dos direitos humanos historicamente associados à Independência dos Estados Unidos, bem como aos estudos e experiências que discutem os impactos da globalização, das políticas educacionais e das tecnologias digitais nos processos de ensino-aprendizagem, relacionando-os aos ideais democráticos e aos direitos humanos decorrentes à luz dos marcos históricos da Independência dos Estados Unidos. As pesquisas desenvolvidas abordaram a formação docente e inovação, educação digital e Ensino a Distância (EaD), interculturalidade e políticas educacionais, bem como a interseccionalidade entre raça, classe, gênero, idade, sexualidade e cidadania. Assim, os grupos de trabalho da área das ciências da educação estimulam o desenvolvimento de abordagens sob a perspectiva pós-estruturalista que possuem entre seus objetivos, por exemplo, a elaboração de críticas às normas sociais vigentes e aos mecanismos de exclusão visíveis ou invisíveis presentes na educação e no ambiente digital. No campo da pesquisa, essa perspectiva também propõe uma revisão crítica dos referenciais teóricos, metodológicos e epistemológicos que tradicionalmente invisibilizam determinados grupos sociais, conhecimentos e experiências; por entender que a sociedade e a cultura não constituem um espaço neutro, mas um campo da manifestação das relações de poder. No contexto da educação digital, essa discussão se torna ainda mais necessária, pois a exclusão digital não ocorre apenas pelo acesso limitado à tecnologia, mas também pela invisibilidade de determinados grupos nos espaços virtuais e pela disseminação de discursos de ódio. Os grupos de trabalho da área das ciências da educação da Enber University reafirmam a importância de compreender a educação como espaço de reflexão crítica, de produção de conhecimento, de diálogo intercultural e de construção coletiva de práticas mais justas e democráticas capazes de ampliar o compromisso ético com a diversidade, a inclusão e a justiça social.</jats:p>
+fulltext_available: false
+fulltext_source: "none"
+created: "2026-08-17T09:46:43.392354"
+---
+
+# IV Congresso Internacional Enber University e Ciências da Educação
+
+## Abstract
+
+<jats:p>O IV Congresso Internacional da Enber University (2026) propôs como tema os “250 Anos da Independência: Saberes, Direitos e Responsabilidades para o Futuro”, um marco histórico que extrapola a simples celebração nacional, pois oferece a oportunidade de questionar se as novas gerações compreendem os princípios que tornaram a independência estadunidense possível e, assim como, se as escolas estão preparando os estudantes para preservar e fortalecer esses valores democráticos. Os 250 anos da independência dos EUA não devem ser vistos apenas como uma celebração patriótica, mas um convite à reflexão sobre a forma como a educação cívica vem sendo ensinada e como os valores democráticos estão sendo vivenciados na sociedade contemporânea. Durante o evento, os Grupos de Trabalho do Programa de Pós-graduação em Ciências da Educação: Educação, Democracia e Direitos Humanos: Diversidade, Inclusão e Formação para a Cidadania à luz do Contexto dos 250 Anos da Independência dos Estados Unidos e, Educação, Globalização e Transformações Sociais: Processos Educativos, Políticas Públicas e Tecnologias em Perspectiva Democrática -, reuniram pesquisas relacionadas à educação como espaço de construção da democracia e da cidadania, à luz dos princípios dos direitos humanos historicamente associados à Independência dos Estados Unidos, bem como aos estudos e experiências que discutem os impactos da globalização, das políticas educacionais e das tecnologias digitais nos processos de ensino-aprendizagem, relacionando-os aos ideais democráticos e aos direitos humanos decorrentes à luz dos marcos históricos da Independência dos Estados Unidos. As pesquisas desenvolvidas abordaram a formação docente e inovação, educação digital e Ensino a Distância (EaD), interculturalidade e políticas educacionais, bem como a interseccionalidade entre raça, classe, gênero, idade, sexualidade e cidadania. Assim, os grupos de trabalho da área das ciências da educação estimulam o desenvolvimento de abordagens sob a perspectiva pós-estruturalista que possuem entre seus objetivos, por exemplo, a elaboração de críticas às normas sociais vigentes e aos mecanismos de exclusão visíveis ou invisíveis presentes na educação e no ambiente digital. No campo da pesquisa, essa perspectiva também propõe uma revisão crítica dos referenciais teóricos, metodológicos e epistemológicos que tradicionalmente invisibilizam determinados grupos sociais, conhecimentos e experiências; por entender que a sociedade e a cultura não constituem um espaço neutro, mas um campo da manifestação das relações de poder. No contexto da educação digital, essa discussão se torna ainda mais necessária, pois a exclusão digital não ocorre apenas pelo acesso limitado à tecnologia, mas também pela invisibilidade de determinados grupos nos espaços virtuais e pela disseminação de discursos de ódio. Os grupos de trabalho da área das ciências da educação da Enber University reafirmam a importância de compreender a educação como espaço de reflexão crítica, de produção de conhecimento, de diálogo intercultural e de construção coletiva de práticas mais justas e democráticas capazes de ampliar o compromisso ético com a diversidade, a inclusão e a justiça social.</jats:p>
+
+## Links
+
+- DOI: [10.57108/iesj.congresso2026.1](https://doi.org/10.57108/iesj.congresso2026.1)
+- URL: [Link](https://doi.org/10.57108/iesj.congresso2026.1)
+
+## Faculty
+
+- [[radboud-university/faculty#floris-de-lange|Floris de Lange]]
