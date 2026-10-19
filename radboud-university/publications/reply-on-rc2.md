@@ -1,10 +1,10 @@
 ---
 title: "Reply on RC2"
 authors:
-  - "Anna Lange"
+  - "Nico Lange"
 year: 2026
-doi: "10.5194/egusphere-2025-5446-ac1"
-url: "https://doi.org/10.5194/egusphere-2025-5446-ac1"
+doi: "10.5194/essd-2026-496-ac2"
+url: "https://doi.org/10.5194/essd-2026-496-ac2"
 lab: "radboud-university"
 faculty:
   - "Floris de Lange"
@@ -13,15 +13,15 @@ tags:
   - "radboud-university"
 fulltext_available: false
 fulltext_source: "none"
-created: "2026-03-09T09:56:13.688097"
+created: "2026-10-19T16:16:46.068281"
 ---
 
 # Reply on RC2
 
 ## Links
 
-- DOI: [10.5194/egusphere-2025-5446-ac1](https://doi.org/10.5194/egusphere-2025-5446-ac1)
-- URL: [Link](https://doi.org/10.5194/egusphere-2025-5446-ac1)
+- DOI: [10.5194/essd-2026-496-ac2](https://doi.org/10.5194/essd-2026-496-ac2)
+- URL: [Link](https://doi.org/10.5194/essd-2026-496-ac2)
 
 ## Faculty
 

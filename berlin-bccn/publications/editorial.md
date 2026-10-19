@@ -1,13 +1,13 @@
 ---
 title: "Editorial"
 authors:
-  - "Anke Langner"
-  - "Matthias Ritter"
-  - "Marlis Pesch"
+  - "Tobias Braune-Krickau"
+  - "Hans-Ulrich Probst"
+  - "Karoline Ritter"
 year: 2026
-journal: "Entwicklung von schüler:innenzentrierten Lehr-Lernformaten an der Universitätsschule Dresden"
-doi: "10.1007/978-3-658-49053-9_1"
-url: "https://doi.org/10.1007/978-3-658-49053-9_1"
+journal: "Praktische Theologie"
+doi: "10.1515/prth-2026-3019"
+url: "https://doi.org/10.1515/prth-2026-3019"
 lab: "berlin-bccn"
 faculty:
   - "Petra Ritter"
@@ -16,15 +16,15 @@ tags:
   - "berlin-bccn"
 fulltext_available: false
 fulltext_source: "none"
-created: "2026-01-05T09:37:52.256814"
+created: "2026-10-19T16:19:05.033366"
 ---
 
 # Editorial
 
 ## Links
 
-- DOI: [10.1007/978-3-658-49053-9_1](https://doi.org/10.1007/978-3-658-49053-9_1)
-- URL: [Link](https://doi.org/10.1007/978-3-658-49053-9_1)
+- DOI: [10.1515/prth-2026-3019](https://doi.org/10.1515/prth-2026-3019)
+- URL: [Link](https://doi.org/10.1515/prth-2026-3019)
 
 ## Faculty
 
